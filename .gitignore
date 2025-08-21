@@ -1,4 +1,2 @@
 #ignore config
 config.php
-app/core/config.php
-/config/
