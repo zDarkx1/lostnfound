@@ -3,7 +3,7 @@
 class App
 {
     //default route
-    protected $controller = 'Home';
+    protected $controller = 'LandingPage';
     protected $method = 'index';
     protected $params = [];
 
