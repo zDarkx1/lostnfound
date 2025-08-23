@@ -1,4 +1,4 @@
-<style>
+~<style>
     body {
         height: 100vh;
         background-color: white;
