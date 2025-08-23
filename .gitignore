@@ -1,0 +1,6 @@
+#ignore config
+config.php
+/config/
+.env
+/.env
+*.env

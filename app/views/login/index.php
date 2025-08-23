@@ -1,7 +1,3 @@
-<?php
-include __DIR__ . '/../templates/header.php';
-?>
-
 <style>
     body {
         height: 100vh;
@@ -110,7 +106,11 @@ include __DIR__ . '/../templates/header.php';
             </form>
 
             <div class="mt-4 text-sm space-y-2">
-                <p><a href="/forgot_password" class="font-medium text-zinc-950 dark hover:underline">Forgot your password?</a></p>
+                <<<<<<< HEAD
+                    <p><a href="/forgot_password" class="font-medium text-zinc-950 dark hover:underline">Forgot your password?</a></p>
+                    =======
+                    <p><a href="/forgot_password" class="font-medium text-zinc-950 dark hover:underline">Lupa password?</a></p>
+                    >>>>>>> staging/mvc
             </div>
         </div>
     </div>
