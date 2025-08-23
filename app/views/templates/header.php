@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title><?php echo $data['title']; ?></title>
 </head>
 
 <body class="overflow-x-hidden">
@@ -21,7 +22,7 @@
 
                 <!-- Navigation -->
                 <nav class="hidden md:flex md:text-xl space-x-6">
-                    <a href="/" class="text-gray-700 hover:text-sky-700 transition">Home</a>
+                    <a href="/lostnfound/public" class="text-gray-700 hover:text-sky-700 transition">Home</a>
                     <a href="/items" class="text-gray-700 hover:text-sky-700 transition">Items</a>
                     <a href="/report" class="text-gray-700 hover:text-sky-700 transition">Report</a>
                     <a href="/about" class="text-gray-700 hover:text-sky-700 transition">About</a>

@@ -2,7 +2,7 @@
 
     <!-- ✅ Hero Banner -->
     <div class="h-screen w-screen flex flex-col items-center p-6">
-        <div class="h-3/4 w-full md:w-6/7 bg-neutral-100 mt-12 rounded-2xl md:flex gap-2 shadow-md">
+        <div class="h-3/4 w-full md:w-6/7 bg-neutral-50 mt-12 rounded-2xl md:flex gap-2 shadow-md">
 
             <!-- Left text block -->
             <div class="h-1/2 md:h-full md:w-1/2 flex flex-col justify-between">
@@ -10,7 +10,7 @@
                     <h1 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-4">
                         Find what you lost. Return what you found.
                     </h1>
-                    <p class="text-lg md:text-xl text-zinc-700">
+                    <p class="text-lg md7:text-xl text-zinc-700">
                         Lost something? Let us help you find it. Found something? Return it to its owner.
                         <strong>LostnFound</strong> is a community-driven platform that connects people who have lost items with those who have found them.
                     </p>
@@ -95,16 +95,16 @@
                 <a href="/items" class="text-md text-blue-600 hover:underline ">View all</a>
             </div>
 
-            <!-- Item cards grid -->
+            <!-- Item cards grid -->    
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
                 <?php foreach ($data['items'] as $item): ?>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:shadow-sky-500/25 transition">
+                    <div class="bg-white rounded    -lg shadow-md overflow-hidden hover:shadow-2xl hover:shadow-sky-500/25 transition">
                         <img src="https://placehold.co/400x200" class="w-full h-40 object-cover">
                         <div class="p-3">
-                            <h4 class="font-bold tracking-wider text-xl"><?= htmlspecialchars($item['title']) ?></h4>
-                            <p class="text-md text-gray-600"><?= htmlspecialchars($item['location']) ?> - <?= htmlspecialchars($item['date']) ?></p>
-                            <p class="text-sm text-gray-500"><?= htmlspecialchars($item['description']) ?></p>
+                            <h4 class="font-bold tracking-wider text-xl mb-2"><?= htmlspecialchars($item['title']) ?></h4>
+                            <p class="text-md text-gray-600"> <i class="fas fa-map-marker-alt mr-1 mb-2"></i><?= htmlspecialchars($item['location']) ?> - <?= htmlspecialchars($item['date']) ?></p>
+                            <p class="text-sm text-gray-500"><i class="fas fa-info ml-[1px] mr-[6px]"></i><?= htmlspecialchars($item['description']) ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -113,7 +113,6 @@
 
         </div>
     </div>
-
 
     </div>
 </main>

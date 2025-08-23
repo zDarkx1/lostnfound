@@ -1,4 +1,3 @@
-
 <style>
     body {
         height: 100vh;
@@ -93,11 +92,11 @@
                 <div class="space-y-4">
                     <div>
                         <label for="email" class="block text-sm font-medium text-zinc-950">Email</label>
-                        <input id="email" name="email" placeholder="name@example.com" type="email" autocomplete="email" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        <input id="email" name="email" placeholder="name@example.com" type="email" autocomplete="email" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-100" required>
                     </div>
                     <div>
                         <label for="password" class="block text-sm font-medium text-zinc-950">Password</label>
-                        <input id="password" name="password" placeholder="Password" type="password" autocomplete="current-password" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        <input id="password" name="password" placeholder="Password" type="password" autocomplete="current-password" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-100" required>
                     </div>
                     <button type="submit" class="w-full py-3 px-4 text-sm font-medium text-white bg-blue-600 rounded-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                         Masuk
