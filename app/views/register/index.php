@@ -64,16 +64,16 @@ include __DIR__ . '/../templates/header.php';
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="mr-2 h-4 w-2 text-current" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
                 </svg>
-                <p class="font-medium relative z-10">Back to the website</p>
+                <p class="font-medium relative z-10">Kembali ke beranda</p>
             </a>
         </div>
 
 
         <div class="bg-white p-6 rounded-lg">
-            <h1 class="text-3xl font-bold text-zinc-950 dark:text mb-2">Masuk</h1>
-            <p class="text-sm text-zinc-950 dark:text-zinc-400 mb-6">Masukan email dan kata sandi untuk masuk!</p>
+            <h1 class="text-3xl font-bold text-zinc-950 dark:text mb-2">Registrasi</h1>
+            <p class="text-sm text-zinc-950 dark:text-zinc-400 mb-6">Buat akun untuk melanjutkan!</p>
 
-            <form action="#" method="post" class="mb-4">
+            <!-- <form action="#" method="post" class="mb-4">
                 <input type="hidden" name="provider" value="google">
                 <button type="submit" class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium text-zinc-950 bg-gray-100 rounded-md transition-colors hover:bg-gray-200">
                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="h-5 w-5 mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -84,34 +84,37 @@ include __DIR__ . '/../templates/header.php';
                     </svg>
                     Masuk dengan Google
                 </button>
-            </form>
+            </form> -->
 
             <div class="flex items-center my-4">
                 <div class="flex-grow border-t border-zinc-200 dark:border-zinc-700"></div>
-                <span class="mx-4 text-zinc-400 text-sm">or</span>
                 <div class="flex-grow border-t border-zinc-200 dark:border-zinc-700"></div>
             </div>
 
             <form action="#" method="post" novalidate>
                 <div class="space-y-4">
                     <div>
+                        <label for="name" class="block text-sm font-medium text-zinc-950">Nama</label>
+                        <input id="name" name="name" placeholder="Nama Anda" type="text" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
                         <label for="email" class="block text-sm font-medium text-zinc-950">Email</label>
                         <input id="email" name="email" placeholder="name@example.com" type="email" autocomplete="email" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
                     </div>
                     <div>
+                        <label for="number" class="block text-sm font-medium text-zinc-950">No. Handphone</label>
+                        <input id="number" name="number" placeholder="Nomor Handphone Anda" type="tel" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                    </div>
+                    <div>
                         <label for="password" class="block text-sm font-medium text-zinc-950">Password</label>
-                        <input id="password" name="password" placeholder="Password" type="password" autocomplete="current-password" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        <input id="password" name="password" placeholder="Kata Sandi" type="password" autocomplete="current-password" class="mt-1 block w-full px-4 py-3 text-sm rounded-md border border-zinc-200 bg-white text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
                     </div>
                     <button type="submit" class="w-full py-3 px-4 text-sm font-medium text-white bg-blue-600 rounded-md transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Masuk
+                        Registrasi
                     </button>
 
                 </div>
             </form>
-
-            <div class="mt-4 text-sm space-y-2">
-                <p><a href="/forgot_password" class="font-medium text-zinc-950 dark hover:underline">Lupa password?</a></p>
-            </div>
         </div>
     </div>
 </body>
