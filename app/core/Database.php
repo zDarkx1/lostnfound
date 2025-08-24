@@ -3,10 +3,10 @@
 class Database
 {
     //from config.php
-    private $host = DB_HOST;
-    private $user = DB_USER;
-    private $pass = DB_PASS;
-    private $name = DB_NAME;
+    protected $host = DB_HOST;
+    protected $user = DB_USER;
+    protected $pass = DB_PASS;
+    protected $name = DB_NAME;
     private $dbh;
     private $stmt;
     private $options = [

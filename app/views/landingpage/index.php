@@ -39,8 +39,11 @@
         </div>
     </div>
 
+    <section class="h-full w-full bg-zinc-50">
+
+    </section>
     <!-- ✅ Quick Search -->
-    <div class="border-t border-neutral-300 h-full w-screen bg-zinc-50 p-6">
+    <div class="border-t border-neutral-300 h-[50dvh] w-screen bg-zinc-50 p-6">
         <div class="h-full w-full md:w-6/7 bg-white shadow-md rounded-lg mb-8 mx-auto my-6 pt-2 px-8 relative">
             <h2 class="text-5xl m-6 font-bold">Quick Search</h2>
 
@@ -95,24 +98,23 @@
                 <a href="/items" class="text-md text-blue-600 hover:underline ">View all</a>
             </div>
 
-            <!-- Item cards grid -->    
+            <!-- Item cards grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
-                <?php foreach ($data['items'] as $item): ?>
-                    <div class="bg-white rounded    -lg shadow-md overflow-hidden hover:shadow-2xl hover:shadow-sky-500/25 transition">
-                        <img src="https://placehold.co/400x200" class="w-full h-40 object-cover">
-                        <div class="p-3">
-                            <h4 class="font-bold tracking-wider text-xl mb-2"><?= htmlspecialchars($item['title']) ?></h4>
-                            <p class="text-md text-gray-600"> <i class="fas fa-map-marker-alt mr-1 mb-2"></i><?= htmlspecialchars($item['location']) ?> - <?= htmlspecialchars($item['date']) ?></p>
-                            <p class="text-sm text-gray-500"><i class="fas fa-info ml-[1px] mr-[6px]"></i><?= htmlspecialchars($item['description']) ?></p>
+                <?php if (!empty($data['items'])): ?>
+                    <?php foreach ($data['items'] as $item): ?>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl hover:shadow-sky-500/25 transition">
+                            <img src="https://placehold.co/400x200" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h4 class="font-bold tracking-wider text-xl mb-2"><?= htmlspecialchars($item['title']) ?></h4>
+                                <p class="text-md text-gray-600"> <i class="fas fa-map-marker-alt mr-1 mb-2"></i><?= htmlspecialchars($item['location']) ?> - <?= htmlspecialchars($item['date']) ?></p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-info ml-[1px] mr-[6px]"></i><?= htmlspecialchars($item['description']) ?></p>
+                            </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
-
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
 
         </div>
-    </div>
 
     </div>
 </main>
