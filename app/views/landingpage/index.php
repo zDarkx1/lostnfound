@@ -51,9 +51,9 @@
             <div class="flex items-center">
                 <input type="text"
                     placeholder="Search for lost or found items..."
-                    class="flex-1 p-5 border border-gray-300 rounded-s-lg text-xl
+                    class="flex-1 p-5 border border-gray-300 rounded-s-2xl text-xl
                               focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition">
-                <button class="px-6 py-[1.35rem] bg-blue-500 font-semibold text-white rounded-e-lg text-lg hover:bg-sky-700 transition">
+                <button class="px-6 py-[1.35rem] bg-blue-500 font-semibold text-white rounded-e-2xl text-lg hover:bg-sky-700 transition">
                     Search
                 </button>
             </div>

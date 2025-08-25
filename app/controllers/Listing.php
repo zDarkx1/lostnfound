@@ -1,6 +1,6 @@
 <?php
 
-class Reports extends Controller
+class Listing extends Controller
 {
     private $ListingModel;
     private $userModel;
@@ -57,7 +57,7 @@ class Reports extends Controller
         ];
 
         $this->view('templates/header', $data);
-        $this->view('reports/index', $data);
+        $this->view('listing/index', $data);
         $this->view('templates/footer', $data);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-class Reports_model
+class Listing_model
 {
     protected $table = 'listing';
     private $db;
