@@ -9,6 +9,22 @@ class User_model
         $this->db = new Database();
     }
 
+    public function login($email, $password)
+    {
+        $this->db->query("SELECT * FROM users WHERE email = :email");
+        $this->db->bind(':email', $email);
+        $row = $this->db->single();
+        if ($row) {
+            if (password_verify($password, $row->password)) {
+                return $row;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
     public function createUser($data)
     {
         $this->db->query("INSERT INTO users (name, email, phone, password) VALUES (:name, :email, :phone, :password)");

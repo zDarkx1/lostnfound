@@ -2,14 +2,14 @@
 
 class Reports_model
 {
-    protected $table = 'reports';
+    protected $table = 'listing';
     private $db;
     public function __construct()
     {
         $this->db = new Database;
     }
 
-    public function createReport($data)
+    public function createListing($data)
     {
         $this->db->query("INSERT INTO {$this->table} (title, description,time,status, user_id) VALUES (:title, :description, :time, :status, :user_id)");
         $this->db->bind(':title', $data['title']);
@@ -20,18 +20,18 @@ class Reports_model
         return $this->db->execute();
     }
 
-    public function getAllReports()
+    public function getAllListing()
     {
         $this->db->query("SELECT * FROM {$this->table} ORDER BY created_at DESC");
         return $this->db->resultSet();
     }
-    public function getReportById($id)
+    public function getListingByKeyword($keyword)
     {
-        $this->db->query("SELECT * FROM {$this->table} WHERE id = :id");
-        $this->db->bind(':id', $id);
-        return $this->db->single();
+        $this->db->query("SELECT * FROM {$this->table} WHERE title LIKE :keyword OR description LIKE :keyword");
+        $this->db->bind(':keyword', "%$keyword%");
+        return $this->db->resultSet();
     }
-    public function updateReport($id, $data)
+    public function updateListing($id, $data)
     {
         $this->db->query("UPDATE {$this->table} SET title = :title, description = :description, status = :status WHERE id = :id");
         $this->db->bind(':id', $id);
@@ -40,20 +40,20 @@ class Reports_model
         $this->db->bind(':status', $data['status']);
         return $this->db->execute();
     }
-    public function deleteReport($id)
+    public function deleteListing($id)
     {
         $this->db->query("DELETE FROM {$this->table} WHERE id = :id");
         $this->db->bind(':id', $id);
         return $this->db->execute();
     }
 
-    public function getReportsByUserId($user_id)
+    public function getListingsByUserId($user_id)
     {
         $this->db->query("SELECT * FROM {$this->table} WHERE user_id = :user_id");
         $this->db->bind(':user_id', $user_id);
         return $this->db->resultSet();
     }
-    public function searchReports($keyword)
+    public function searchListings($keyword)
     {
         $this->db->query("SELECT * FROM {$this->table} WHERE title LIKE :keyword OR description LIKE :keyword");
         $this->db->bind(':keyword', "%$keyword%");

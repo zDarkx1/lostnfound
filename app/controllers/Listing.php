@@ -2,21 +2,19 @@
 
 class Reports extends Controller
 {
-    private $reportModel;
+    private $ListingModel;
     private $userModel;
 
     public function __construct()
     {
-        $this->reportModel = $this->model('Reports_model');
+        $this->ListingModel = $this->model('Listing_model');
         $this->userModel = $this->model('User_model');
     }
 
     public function index()
     {
-
-
         $data = [
-            'title' => 'All Reports',
+            'title' => 'All Listings',
             'items' => [
                 [
                     'title' => 'Black Leather Wallet',
@@ -55,6 +53,7 @@ class Reports extends Controller
                     'description' => 'Red mountain bike.'
                 ]
             ] //dummy data
+
         ];
 
         $this->view('templates/header', $data);
